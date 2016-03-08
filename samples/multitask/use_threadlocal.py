@@ -15,6 +15,7 @@ def process_thread(name):
     # 绑定ThreadLocal的student:
     local_school.student = name
     process_student()
+print（”----------------------------------------------------------------“）
 
 t1 = threading.Thread(target= process_thread, args=('Alice',), name='Thread-A')
 t2 = threading.Thread(target= process_thread, args=('Bob',), name='Thread-B')
